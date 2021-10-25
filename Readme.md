@@ -8,8 +8,11 @@ TODO :
 2. Move Base URL to BuildConfig
 3. Implement Tests
 
-Currencies API Response : https://github.com/alokomkar/CurrencyExchange/blob/master/local/src/main/res/raw/currencies.json
-Supported currencies API Response : https://github.com/alokomkar/CurrencyExchange/blob/master/local/src/main/res/raw/exchange.json
+Currencies API Response : 
+  https://github.com/alokomkar/CurrencyExchange/blob/master/local/src/main/res/raw/currencies.json
+  
+Supported currencies API Response : 
+  https://github.com/alokomkar/CurrencyExchange/blob/master/local/src/main/res/raw/exchange.json
 
 References :
 1. https://www.raywenderlich.com/1423941-kotlin-coroutines-tutorial-for-android-getting-started
