@@ -23,7 +23,7 @@ class NetworkModule {
 
     private val BASE_URL = "http://api.currencylayer.com/"
     private val KEY_API = "access_key"
-    private val API_KEY = "0176e44ee5206f6c55f5214477fe8484"
+    private val API_KEY = "your_api_key_here"
     private val TIMEOUT_SECOND: Long = 15
 
     @Singleton
