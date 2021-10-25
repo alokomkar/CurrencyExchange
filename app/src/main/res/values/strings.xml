@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Currency</string>
+    <string name="supported_currencies">Supported Currencies</string>
+    <string name="usd">USD</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="enter_currency_value">Enter Currency Value</string>
+    <string name="no_results_found">No results found</string>
+    <string name="required">Required</string>
+</resources>

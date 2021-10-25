@@ -1,0 +1,62 @@
+plugins {
+  id 'com.android.library'
+  id 'kotlin-android'
+  id 'kotlin-kapt'
+  id 'dagger.hilt.android.plugin'
+  id 'kotlin-android-extensions'
+}
+
+apply from: '../common.gradle'
+
+android {
+  compileSdk 30
+
+  defaultConfig {
+    minSdk 16
+    targetSdk 30
+    versionCode 1
+    versionName "1.0"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles "consumer-rules.pro"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+}
+
+// Allow references to generated code
+kapt {
+  correctErrorTypes = true
+}
+
+androidExtensions {
+  experimental = true
+}
+
+dependencies {
+
+  //Network
+  implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+  implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+  implementation 'com.github.chuckerteam.chucker:library:3.5.2'
+
+  //Coroutines
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1'
+
+  //Testing
+  testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.2'
+
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:background="@color/dialog_background_color"
+    >
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCurrencyValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/tvSelectedCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/padding_default"
+        android:inputType="numberDecimal"
+        tools:text="1.00"
+        android:hint="@string/enter_currency_value"
+        android:background="@color/white"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectedCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/grey"
+        android:drawableEnd="@android:drawable/arrow_down_float"
+        android:drawablePadding="@dimen/padding_default"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:padding="@dimen/padding_default"
+        android:text="@string/usd"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etCurrencyValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etCurrencyValue"
+        />
+
+    <View
+        android:id="@+id/dividerView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCurrencyValue"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/padding_default"
+        android:paddingHorizontal="@dimen/padding_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerView"
+        tools:listitem="@layout/item_currency_rate"
+        android:clipToPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="@dimen/padding_default"
+        android:text="@string/no_results_found"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerView"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:background="@color/white"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
