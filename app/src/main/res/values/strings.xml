@@ -6,4 +6,5 @@
     <string name="enter_currency_value">Enter Currency Value</string>
     <string name="no_results_found">No results found</string>
     <string name="required">Required</string>
+    <string name="title_auth">Currency Exchange Signup</string>
 </resources>

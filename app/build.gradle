@@ -28,7 +28,7 @@ android {
   buildTypes {
     release {
       minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-auth.pro'
     }
   }
   compileOptions {
@@ -38,6 +38,9 @@ android {
   kotlinOptions {
     jvmTarget = '1.8'
   }
+  // Specifies feature modules that have a dependency on
+  // this base module.
+  dynamicFeatures = [':auth']
 }
 
 // Allow references to generated code
