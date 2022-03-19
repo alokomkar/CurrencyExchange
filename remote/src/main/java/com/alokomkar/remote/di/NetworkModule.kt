@@ -56,7 +56,11 @@ class NetworkModule {
             ).build()
             interceptorChain.proceed(request)
         }
-        .addInterceptor(chuckerInterceptor)
+        .apply {
+            if(BuildConfig.DEBUG) {
+                addInterceptor(chuckerInterceptor)
+            }
+        }
         .build()
 
     @Singleton
