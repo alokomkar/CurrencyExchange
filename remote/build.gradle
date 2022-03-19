@@ -27,6 +27,7 @@ android {
   buildTypes {
     debug {
       buildConfigField("String", "API_KEY", "\"" + localProperties['api_key'] + "\"")
+      buildConfigField("String", "BASE_URL", "\"http://api.currencylayer.com/\"")
     }
     release {
       minifyEnabled false
