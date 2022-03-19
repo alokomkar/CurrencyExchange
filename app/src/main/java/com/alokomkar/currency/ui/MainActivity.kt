@@ -67,12 +67,12 @@ class MainActivity: AppCompatActivity(), SupportedCurrencyDialog.SupportedCurren
     }
 
     private fun setObservers() {
-        currencyViewModel.uiLiveData.observe(this, {
+        currencyViewModel.uiLiveData.observe(this) {
             debugLog("Loading : ${it.isLoading}")
-            debugLog("State : Currency Rates : ${it.currencyRates}" )
-            debugLog("State : Supported Currencies : ${it.supportedCurrencies}" )
+            debugLog("State : Currency Rates : ${it.currencyRates}")
+            debugLog("State : Supported Currencies : ${it.supportedCurrencies}")
             bindData(it.currencyRates)
-        })
+        }
         currencyViewModel.errorStateLiveData.observe(this, EventObserver {
             debugLog("Error : ${it.error}")
             handleError(it.error)

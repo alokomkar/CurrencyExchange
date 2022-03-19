@@ -22,6 +22,7 @@
             android:gravity="center"
             android:textStyle="normal"
             style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
             tools:text="USD"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -33,6 +34,7 @@
             android:textStyle="normal"
             style="@style/TextAppearance.AppCompat.Body2"
             android:background="@color/grey"
+            android:textColor="@color/black"
             tools:text="United States Dollar"/>
 
     </LinearLayout>

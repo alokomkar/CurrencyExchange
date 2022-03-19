@@ -22,6 +22,7 @@
             android:gravity="center"
             android:textStyle="normal"
             style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
             tools:text="22.99"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -32,6 +33,7 @@
             android:gravity="center"
             android:textStyle="normal"
             style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
             android:background="@color/grey"
             tools:text="USD"/>
 

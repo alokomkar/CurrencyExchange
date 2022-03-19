@@ -23,7 +23,8 @@ import javax.inject.Inject
 @HiltViewModel
 class CurrencyViewModel @Inject constructor(
     private val repository: ICurrencyRepository,
-    private val dispatcherProvider: DispatcherProvider): ViewModel() {
+    private val dispatcherProvider: DispatcherProvider
+): ViewModel() {
 
     private val _uiLiveData: MutableLiveData<UiState> = MutableLiveData()
     val uiLiveData: LiveData<UiState> by this::_uiLiveData
@@ -45,7 +46,7 @@ class CurrencyViewModel @Inject constructor(
     private suspend fun performCurrencyConversion(amountAndCurrency: Pair<String, String>): List<CurrencyRate>
             = withContext(dispatcherProvider.default) {
         val convertedCurrencyRates: MutableList<CurrencyRate> = mutableListOf()
-        val inputAmountString = if(amountAndCurrency.first.isEmpty()) "1" else amountAndCurrency.first
+        val inputAmountString = amountAndCurrency.first.ifEmpty { "1" }
         val amount = inputAmountString.toDouble()
         val selectedCurrency = amountAndCurrency.second
         Log.d("VM", "Currency Conversion : $amountAndCurrency")
