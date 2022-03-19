@@ -1,6 +1,7 @@
 package com.alokomkar.remote.di
 
 import android.content.Context
+import com.alokomkar.remote.BuildConfig
 import com.alokomkar.remote.api.CurrencyAPI
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
@@ -23,7 +24,7 @@ class NetworkModule {
 
     private val BASE_URL = "http://api.currencylayer.com/"
     private val KEY_API = "access_key"
-    private val API_KEY = "your_api_key_here"
+    private val API_KEY = BuildConfig.API_KEY
     private val TIMEOUT_SECOND: Long = 15
 
     @Singleton
