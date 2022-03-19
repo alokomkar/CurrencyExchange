@@ -22,7 +22,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
 
-    private val BASE_URL = "http://api.currencylayer.com/"
+    private val BASE_URL = BuildConfig.BASE_URL
     private val KEY_API = "access_key"
     private val API_KEY = BuildConfig.API_KEY
     private val TIMEOUT_SECOND: Long = 15
