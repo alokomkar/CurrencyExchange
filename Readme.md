@@ -2,11 +2,11 @@ Sample currency exchange project :
 1. Dagger-hilt for DI, 
 2. Kotlin coroutines
 3. Flow for implementation.
+4. Store token in a secure manner : moved to local.properties [https://blog.mindorks.com/using-local-properties-file-to-avoid-api-keys-check-in-into-version-control-system]
 
 TODO : 
-1. Store token in a secure manner, 
-2. Move Base URL to BuildConfig
-3. Implement Tests
+1. Move Base URL to BuildConfig
+2. Implement Tests
 
 Currencies API Response : 
   https://github.com/alokomkar/CurrencyExchange/blob/master/local/src/main/res/raw/currencies.json
