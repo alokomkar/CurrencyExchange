@@ -3,7 +3,6 @@ plugins {
   id 'kotlin-android'
   id 'kotlin-kapt'
   id 'dagger.hilt.android.plugin'
-  id 'kotlin-android-extensions'
 }
 
 apply from: '../common.gradle'
@@ -13,7 +12,7 @@ android {
 
   defaultConfig {
     applicationId "com.alokomkar.auth"
-    minSdk 16
+    minSdk 21
     targetSdk 30
     versionCode 1
     versionName "1.0"
